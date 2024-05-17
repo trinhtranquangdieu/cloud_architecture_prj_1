@@ -1,0 +1,5 @@
+Here are the achievable objectives in Recovery Time Objective (RTO) and Recovery Point Objective (RPO):
+
+The minimum RTO for a single AZ outage would typically be within minutes thanks to the automatic failover to the standby replica in another AZ within the same region which helps keep downtime to a minimal and business in smooth continuity. No data loss will occur so RPO is 0
+
+Minimum RTO for a single region outage: if this happens, the RTO is how long it takes to promote the replica which is about 5 minutes. RPO would be more or less than 10 mins because by default, Amazon RDS supports asynchronous replication for read replicas across regions.
